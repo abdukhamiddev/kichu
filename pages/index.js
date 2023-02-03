@@ -1,21 +1,21 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
+import Head from 'next/head';
+import Hero from '@/components/Hero';
 
+const Home = () => (
+  <div>
+    <Head>
+      <meta
+        name="description"
+        content="Kichi your favourite app for Japanese food"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.svg" />
+      <title>Kichi</title>
+    </Head>
+    <main className="">
+      <Hero />
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Kichi</title>
-        <meta name="description" content="Kichi your favourite app for Japanese food" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="">
-        
-      </main>
-    </>
-  )
-}
+    </main>
+  </div>
+);
+export default Home;
