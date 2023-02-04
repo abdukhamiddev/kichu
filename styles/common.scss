@@ -1,0 +1,70 @@
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes timer {
+  from {
+    stroke-dashoffset: 125.66368;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.arrow {
+  pointer-events: auto;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(rem(1));
+    font-size: rem(12);
+  }
+  &.swiper-button-disabled {
+    svg {
+      opacity: 0.5;
+    }
+  }
+  &--prev {
+    transform: rotate(-180deg);
+  }
+}
+.arrows {
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(2, rem(40));
+  gap: rem(12);
+  padding-right: 6rem;
+}
+.timer {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  width: rem(40);
+  height: rem(40);
+  svg {
+    width: rem(40);
+    height: rem(40);
+    .loaded & {
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+  &__background {
+    fill: none;
+    stroke-width: rem(2);
+    stroke: transparent;
+  }
+  &__progress {
+    fill: none;
+    stroke-width: rem(2);
+    stroke: #2ca066;
+    stroke-linecap: round;
+    stroke-dasharray: 125.66368;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}

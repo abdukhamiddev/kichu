@@ -4,6 +4,13 @@ module.exports = {
     es2021: true,
   },
   settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true, 
+      },
     tailwindcss: {
       // These are the default values but feel free to customize
       callees: ['classnames', 'clsx', 'ctl'],
@@ -24,7 +31,7 @@ module.exports = {
     },
     'import/resolver': {
       alias: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx','.ts','.tsx'],
         map: [
           ['@', '.'],
         ],
@@ -36,16 +43,16 @@ module.exports = {
     'plugin:@next/next/recommended',
     'airbnb',
     'plugin:tailwindcss/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    
     ecmaVersion: 12,
     sourceType: 'module',
   },
   plugins: [
-    'react',
+    'react', '@typescript-eslint', 'import',
   ],
   rules: {
     'tailwindcss/classnames-order': 'warn',
@@ -133,4 +140,5 @@ module.exports = {
       },
     ],
   },
-};
+}
+}

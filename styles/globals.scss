@@ -1,7 +1,44 @@
+@use "sass:math";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    box-sizing: border-box;
+@import "./utils.scss";
+@import "./base/swiper.scss";
+@import "./components/Slider.module.scss";
+@import "./common.scss";
+
+// @import "./libs/swiper.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "apercu_bold";
+  src: url("../fonts/apercu_bold_pro-webfont.woff2") format("woff2"),
+    url("../fonts/apercu_bold_pro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apercu_medium";
+  src: url("../fonts/apercu_medium_pro-webfont.woff2") format("woff2"),
+    url("../fonts/apercu_medium_pro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "apercu_regular";
+  src: url("../fonts/apercu_regular_pro-webfont.woff2") format("woff2"),
+    url("../fonts/apercu_regular_pro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.slide-container {
+  display: grid;
+  justify-items: center;
 }
