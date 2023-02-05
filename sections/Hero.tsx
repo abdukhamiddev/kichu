@@ -7,6 +7,7 @@ import Paper from "../public/svg/Iconly-Light-Outline-Paper.svg";
 import Phone from "../public/svg/phoneHeader.svg";
 import slider from "@/components/Slider/Slider";
 import Slider from "@/components/Slider/Slider";
+import Button from "@/shared/Button";
 
 const Hero = () => (
   <div className="w-full px-[8vw]">
@@ -20,12 +21,8 @@ const Hero = () => (
           Read more, forget less. Use any image and a few taps to read - and
           remember - anything you'd like
         </p>
-        <button
-          type="button"
-          className=" mb-[50px] w-[250px] rounded-[13px] bg-[#2CA066] px-[24px] py-[14px] text-white"
-        >
-          Sign Up & Download{" "}
-        </button>
+        <Button text="Sign Up & Download" />
+
         <div className="flex items-center justify-between pr-24 font-apercu400 text-sm text-[#515150]">
           <div className="flex items-center space-x-4">
             <Calendar1 />

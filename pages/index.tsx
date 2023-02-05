@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
+import Review from "@/sections/Review";
 
 const Home = () => (
   <div>
@@ -16,6 +17,8 @@ const Home = () => (
     <main className="">
       <Hero />
       <About />
+
+      <Review />
     </main>
   </div>
 );
