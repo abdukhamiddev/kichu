@@ -1,12 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import Calendar1 from "../public/svg/calendar1.svg";
 import Calendar from "../public/svg/Iconly-Bold-Calendar.svg";
 import Paper from "../public/svg/Iconly-Light-Outline-Paper.svg";
 import Phone from "../public/svg/phoneHeader.svg";
-import slider from "@/common/Slider";
-import Slider from "@/common/Slider";
+import slider from "@/components/Slider/Slider";
+import Slider from "@/components/Slider/Slider";
 
 const Hero = () => (
   <div className="w-full px-[8vw]">
@@ -51,7 +51,17 @@ const Hero = () => (
         <Phone />
       </div>
     </div>
-
+    <div className="w-[80vw] flex justify-center text-center pb-[40px]">
+      <div className="w-[60vw]">
+        <h1 className="text-[#737373] font-apercu700 font-bold">
+          <span className="text-[#2ca066]">HOW</span> IT WORKS
+        </h1>
+        <p className="text-3xl leading-10 font-apercu700">
+          Take an image with words you don't know and turn that new vocabulary
+          into flashcards
+        </p>
+      </div>
+    </div>
     <div className="section">
       <Slider />
     </div>

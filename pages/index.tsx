@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
+import Hero from "@/sections/Hero";
+import About from "@/sections/About";
 
 const Home = () => (
   <div>
@@ -14,6 +15,7 @@ const Home = () => (
     </Head>
     <main className="">
       <Hero />
+      <About />
     </main>
   </div>
 );

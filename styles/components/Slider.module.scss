@@ -110,27 +110,6 @@
     }
   }
 
-  .text {
-    pointer-events: none;
-    font-weight: 400;
-    line-height: 164.5%;
-    color: $strong;
-    padding-bottom: rem(122);
-    @include adaptiveValue("font-size", 23, 18, $containerWidth, $minWidth, 1);
-
-    .swiper-slide-active & {
-      pointer-events: auto;
-    }
-
-    @media (max-width: $mobile) {
-      padding-bottom: rem(30);
-    }
-
-    @media (max-width: $mobileSmall) {
-      text-align: center;
-    }
-  }
-
   :global {
     .controls {
       position: relative;
@@ -157,10 +136,6 @@
         align-items: center;
         justify-content: space-between;
         width: rem(276);
-
-        @media (min-width: $mobile) {
-          padding-bottom: rem(42);
-        }
 
         @media (max-width: $mobileSmall) {
           justify-items: center;
@@ -225,10 +200,6 @@
   }
 }
 
-.stepsContainer {
-  width: 90vw;
-  padding: 1rem 2rem;
-}
 .pagination {
   border-radius: 4px;
   width: 250px;

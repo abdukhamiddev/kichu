@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 import Image from "next/image";
 
 type Props = {
@@ -18,7 +16,13 @@ const WorkSlide = ({ step, img, title, text }: Props) => {
             {text}
           </p>
         </div>
-        <Image src={img} alt="Slide" className="" />
+        <div className="relative">
+          <Image
+            src={img}
+            alt="Slide"
+            className="w-[400px] h-[400px] object-contain"
+          />
+        </div>
       </div>
     </>
   );

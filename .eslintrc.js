@@ -44,13 +44,17 @@ module.exports = {
     'airbnb',
     'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
+    "eslint:recommended", "next",
+    "next/core-web-vitals",
   ],
+
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
+    parserOptions: {
+      project: ['./tsconfig.json'],
+      tsconfigRootDir: __dirname,
+      sourceType:module
+    }, 
+  root:true,
   plugins: [
     'react', '@typescript-eslint', 'import',
   ],

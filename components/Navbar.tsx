@@ -7,7 +7,7 @@ const Navbar = () => (
   <div className="">
     <div className="grid grid-cols-11 items-center pt-4 font-apercu400 text-[18px] leading-[24px]">
       <Logo />
-      <ul className="flex col-start-2 col-end-9 pl-12 space-x-12 whitespace-pre font-apercu400 ">
+      <ul className="flex col-start-2 col-end-9 pl-12 space-x-12 whitespace-pre font-apercu400 nav">
         <li>How it works</li>
         <li>Why Kichi</li>
         <li>Pricing</li>

@@ -11,17 +11,13 @@ import {
 import { type Swiper as SwiperRef } from "swiper";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { AutoplayOptions } from "swiper/types";
-import { Slider } from "../@types/slider";
-import { isDesktop } from "../utils/isDesktop";
+import { Slider } from "../../@types/slider";
+import { isDesktop } from "../../utils/isDesktop";
 import SliderControls from "./SliderControls";
 
-import img1 from "/public/img/IPad.webp";
-import img2 from "/public/img/iPhone.webp";
-import img3 from "/public/img/tablet.webp";
-import img4 from "/public/img/tablet.webp";
-
-import styles from ".././styles/components/Slider.module.scss";
+import styles from "../../styles/components/Slider.module.scss";
 import WorkSlide from "./WorkSlide";
+import { WorkSlides } from "../../data";
 
 type Props = {
   className?: string;
@@ -29,34 +25,6 @@ type Props = {
   swiperOption?: SwiperOptions;
   children?: React.ReactNode;
 };
-
-export const WorkSlides = [
-  {
-    img: {
-      webp: img1,
-    },
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis tellus ut pharetra suscipit turpis odio diam mollis pulvinar.",
-  },
-  {
-    img: {
-      webp: img2,
-    },
-
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis tellus ut pharetra suscipit turpis odio diam mollis pulvinar.",
-  },
-  {
-    img: {
-      webp: img3,
-    },
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis tellus ut pharetra suscipit turpis odio diam mollis pulvinar.",
-  },
-  {
-    img: {
-      webp: img4,
-    },
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis tellus ut pharetra suscipit turpis odio diam mollis pulvinar.",
-  },
-];
 
 const Slider = ({ controlsContainerClass }: Props) => {
   const swiper = useSwiper();
@@ -207,8 +175,16 @@ const Slider = ({ controlsContainerClass }: Props) => {
             </button>
           ))}
         </div>
-        <div className={styles.pagination}>
-          <div className="swiper-pagination"></div>
+        <div className="flex flex-row items-center justify-between">
+          <div className={styles.pagination}>
+            <div className="swiper-pagination"></div>
+          </div>
+          <div className="hidden md:block">
+            <SliderControls
+              {...propsControls}
+              controlsContainerClass="controls__shell"
+            />
+          </div>
         </div>
       </div>
 
@@ -221,12 +197,6 @@ const Slider = ({ controlsContainerClass }: Props) => {
           );
         })}
       </Swiper>
-      <div className="controlsContainer">
-        {/* <SliderControls
-          {...propsControls}
-          controlsContainerClass="controls__shell"
-        /> */}
-      </div>
     </div>
   );
 };

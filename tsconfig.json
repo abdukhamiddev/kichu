@@ -25,9 +25,14 @@
   },
   "include": [
     "next-env.d.ts",
+    "./shared/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./sections/**/*.{js,ts,jsx,tsx}",
     "**/*.ts",
-    "**/*.tsx"
-, "data.json"  ],
+    "**/*.tsx",
+  ],
   "exclude": [
     "node_modules"
   ]
