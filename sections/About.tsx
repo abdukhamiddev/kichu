@@ -7,25 +7,33 @@ import Coco4 from "../public/svg/coco-4.svg";
 import AboutCard from "@/shared/AboutCard";
 import Image from "next/image";
 import Button from "@/shared/Button";
+import AboutSlider from "@/components/Slider/AboutSlider";
+
 const About = () => {
   return (
-    <div className="flex flex-col items-center justify-center pt-20">
+    <div className="grid items-center justify-center pt-20 justify-items-center">
       <div className="grid justify-items-center">
-        <div className="text-center">
+        <div className="px-4 pb-6 text-center md:pb-0 md:px-0">
           <p className="font-bold font-apercu700">
             WHY
             <span className="text-[#2ca066] "> KICHI? </span>
           </p>
-          <h2 className="py-4 text-3xl font-bold font-apercu700">
+          <h2 className="py-4 text-2xl font-bold lg:text-3xl font-apercu700">
             So much more than just a translation app
           </h2>
-          <p className="opacity-70 text-[#212121] text-[18px]">
+          <p className="opacity-70 text-[#212121] lg:text-[18px] text-base">
             Read more, forget less. Use any image and a few taps to read - and
             remember - anything you'd like
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 space-x-4 pt-28">
+
+      <div className="flex lg:hidden w-[25vw] pt-[30px] pb-[40px]">
+        <Image src={Phone} alt="About Image" className="w-full h-full" />
+      </div>
+      <AboutSlider />
+
+      <div className="hidden grid-cols-3 space-x-4 lg:grid pt-28 ">
         <div className="flex flex-col items-center pt-36 space-y-28">
           <AboutCard
             text="A rapid-reuse image feature helps for learning lots of words from a single image"

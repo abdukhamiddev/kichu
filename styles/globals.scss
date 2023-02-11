@@ -122,5 +122,20 @@
 .review {
   background-image: url("../public/svg/customerLines.svg");
   background-repeat: no-repeat;
-  height: 100%;
+  margin-top: -200px;
+  margin-bottom: -80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100vh;
+}
+
+.keen-slider__slide {
+  display: grid;
+  padding-left: 2rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }

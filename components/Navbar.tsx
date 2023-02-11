@@ -5,25 +5,26 @@ import ArrowDown from "../public/svg/arrow.svg";
 
 const Navbar = () => (
   <div className="">
-    <div className="grid grid-cols-11 items-center pt-4 font-apercu400 text-[18px] leading-[24px]">
-      <Logo />
-      <ul className="flex col-start-2 col-end-9 pl-12 space-x-12 whitespace-pre font-apercu400 nav">
+    <div className="flex justify-between items-center pt-4 font-apercu400 md:text-[16px] lg:text-[16px] leading-[24px] xl:text-[18px]">
+      <Logo className="" />
+      <ul className="hidden whitespace-pre lg:space-x-12 lg:flex font-apercu400 nav md:px-4 lg:px-0">
         <li>How it works</li>
         <li>Why Kichi</li>
         <li>Pricing</li>
         <li>Download</li>
         <li>Contact</li>
       </ul>
-      <div className="flex items-center space-x-10 ">
-        <button type="submit" className="flex items-center space-x-2">
+      <div className="flex items-center ">
+        <button type="submit" className="items-center hidden space-x-2 lg:flex">
           <Globe />
           <span>Eng </span>
           <ArrowDown />
         </button>
-        <div className="flex space-x-4">
-          <p>Login</p>
-          <p className="whitespace-pre text-[#2CA066]">Sign up</p>
-        </div>
+      </div>
+
+      <div className="flex space-x-4">
+        <button>Login</button>
+        <button className="whitespace-pre text-[#2CA066]">Sign up</button>
       </div>
     </div>
   </div>

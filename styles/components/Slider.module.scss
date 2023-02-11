@@ -43,11 +43,16 @@
   .step {
     transition: all 0.7s ease-in;
     box-shadow: -2px 2px 30px rgba(0, 0, 0, 0.1);
-    width: 245px;
+    width: 25vw;
     position: relative;
     z-index: 1;
     border-radius: 10px;
-
+    @media (min-width: $tablet) {
+      width: 18vw;
+    }
+    @media (max-width: $mobile) {
+      width: 40vw;
+    }
     &:not(:last-child) {
       padding-right: rem(16);
     }
