@@ -126,7 +126,6 @@
   margin-bottom: -80px;
   padding-top: 80px;
   padding-bottom: 80px;
-  height: 100vh;
 }
 
 .keen-slider__slide {
@@ -135,7 +134,15 @@
   justify-items: center;
   width: 100%;
   max-width: 100%;
-  @media (min-width: $tablet) {
+}
+
+#about-slider {
+  @media (min-width: $mobile) {
     display: none;
   }
+}
+.price li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

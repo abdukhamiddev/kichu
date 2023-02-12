@@ -11,7 +11,13 @@ export default function AboutSlider() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       mode: "free-snap",
-
+      breakpoints: {
+        "(min-width:768px)": {
+          slides: {
+            perView: 0,
+          },
+        },
+      },
       slides: {
         perView: 1.5,
         spacing: 20,
@@ -22,7 +28,7 @@ export default function AboutSlider() {
 
   return (
     <>
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider" id="about-slider">
         <div className="keen-slider__slide">
           <AboutCard
             text="A rapid-reuse image feature helps for learning lots of words from a single image"
