@@ -5,7 +5,7 @@ import Button from "@/shared/Button";
 
 const Pricing = () => {
   return (
-    <div className="bg-[#263238] grid justify-items-center mt-28">
+    <div className="bg-[#263238] grid justify-items-center mt-28 px-2">
       <div className="pt-8 space-y-2 text-center">
         <h1 className="text-[#c4c4c4] font-bold font-apercu400">
           CHOOSE <span className="text-[#2ca066]">YOUR PLAN</span>
@@ -18,8 +18,8 @@ const Pricing = () => {
           now...
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-10 py-10 space-y-8 md:space-y-0 md:grid-cols-2 justify-items-center">
-        <div className="bg-[#ffffff] w-[300px] h-[400px] rounded-[10px]">
+      <div className="grid w-full grid-cols-1 gap-10 py-10 space-y-8 md:space-y-0 md:grid-cols-2 justify-items-center md:w-auto">
+        <div className="bg-[#ffffff] md:w-[300px] md:h-[400px] rounded-[10px] w-full h-full ">
           <div className="flex flex-col items-center justify-between w-full h-full pt-6">
             <div>
               <p className="text-3xl">
@@ -46,7 +46,7 @@ const Pricing = () => {
             <Button text="Start FREE" className="w-[210px]" />
           </div>
         </div>
-        <div className="bg-[#ffffff] w-[300px] h-[400px] rounded-[10px]">
+        <div className="bg-[#ffffff] md:w-[300px] md:h-[400px] rounded-[10px] w-full h-full">
           <div className="flex flex-col items-center justify-between w-full h-full pt-6">
             <div>
               <p className="text-3xl">
@@ -74,7 +74,10 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <Button text="Sign up & try Kichi now" className=" bg-[#F45814] my-14" />
+      <Button
+        text="Sign up & try Kichi now"
+        className=" bg-[#F45814] my-14 mx-4 md:mx-0"
+      />
     </div>
   );
 };

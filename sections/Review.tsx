@@ -11,7 +11,7 @@ import ReviewSlider from "@/components/Slider/ReviewSlider";
 const Review = () => {
   return (
     <div className="z-10 pt-20 bg-cover review">
-      <div className="max-w-[1280px] pt-32 lg:pt-80 text-center  items-center justify-center flex flex-col">
+      <div className="grid pt-32 text-center lg:pt-80">
         <div className="pb-10">
           <h4 className="text-[#2ca066] font-bold font-apercu700">REVIEWS</h4>
           <h2 className="text-lg font-apercu400">

@@ -25,19 +25,19 @@ const Hero = () => (
         <Button text="Sign Up & Download" className="hidden md:flex" />
 
         <div className="flex items-center justify-between lg:pr-24 font-apercu400 lg:text-sm text-xs text-[#515150]">
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col items-center space-x-4 md:flex-row">
             <Calendar1 />
             <p>
               Cancel <br /> Anytime
             </p>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex flex-col items-center space-x-4 md:flex-row">
             <Calendar />
             <p>
               7 Day <br /> Free Trial
             </p>
           </div>
-          <div className="flex items-center">
+          <div className="flex flex-col items-center md:flex-row">
             <Paper className="mr-4" />
             <p>
               Works with <br /> Printed & digital media

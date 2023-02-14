@@ -31,7 +31,7 @@ const ReviewSlider = () => {
     []
   );
   return (
-    <div ref={sliderRef} className="keen-slider">
+    <div ref={sliderRef} className="keen-slider" id="reviewslider">
       <div className="keen-slider__slide">
         <ReviewCard
           imgSrc={Person1}
